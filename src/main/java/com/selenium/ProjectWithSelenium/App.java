@@ -15,11 +15,12 @@ public class App
     	
     	WebDriver driver = new ChromeDriver();        
     	driver.manage().window().maximize();
-        driver.get("https://frontend.nopcommerce.com");
+        driver.get("https://amazon.in");
         String title = driver.getTitle();
         System.out.println(title);   
       
-        driver.findElement(By.cssSelector("a[title:'Show details for Build your own computer']")).click();
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("earphones");
+        driver.findElement(By.id("nav-search-submit-button")).click();
         
 
     }
